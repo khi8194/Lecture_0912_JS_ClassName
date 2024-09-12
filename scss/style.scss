@@ -27,6 +27,7 @@ main {
 	position: relative;
 
 	.btnToggle {
+		cursor: pointer;
 		width: 30px;
 		height: 24px;
 		position: absolute;
@@ -36,11 +37,29 @@ main {
 		display: flex;
 		flex-wrap: wrap;
 		align-content: space-between;
+		justify-content: center;
 
 		> div {
 			width: 100%;
 			height: 2px;
 			background-color: #fff;
+			border-radius: 1px;
+			transition: all 0.5s;
+		}
+	}
+	.btnToggle.on {
+		> div {
+			&.middle {
+				width: 0%;
+			}
+			&.top {
+				transform: translateY(11px) rotate(225deg);
+				// transform: translateY(11px) rotate(45deg);
+			}
+			&.bottom {
+				transform: translateY(-11px) rotate(-225deg);
+				// transform: translateY(-11px) rotate(-45deg);
+			}
 		}
 	}
 }

@@ -26,3 +26,10 @@
 // 	box.classList.toggle("on");
 // 	console.log(box.classList.contains("on"));
 // });
+
+const btnToggle = document.querySelector(".btnToggle");
+// const [topEl, middleEl, bottomEl] = btnToggle.querySelectorAll("div"); // 비구조할당
+
+btnToggle.addEventListener("click", () => {
+	btnToggle.classList.toggle("on");
+});
