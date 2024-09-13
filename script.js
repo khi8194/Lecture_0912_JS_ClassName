@@ -29,7 +29,10 @@
 
 const btnToggle = document.querySelector(".btnToggle");
 // const [topEl, middleEl, bottomEl] = btnToggle.querySelectorAll("div"); // 비구조할당
+const mobilePanel = document.querySelector(".mobilePanel");
 
 btnToggle.addEventListener("click", () => {
-	btnToggle.classList.toggle("on");
+	// btnToggle.classList.toggle("on");
+	// mobilePanel.classList.toggle("on");
+	[btnToggle, mobilePanel].forEach((el)=> el.classList.toggle('on'));
 });
